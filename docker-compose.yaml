@@ -26,12 +26,4 @@ services:
       - 5050:80 
     depends_on:
       - postgres
-  
-  app:
-    image: smsleopard/smsl-django:latest
-    ports:
-      - 8800:8800
-    volumes:
-      - ~/apps/logs/smsl-django:/var/log/smsl-django
-      - ~/apps/smsl:/var/www/html/dsmsl
-      - ~/apps/smsl-django:/usr/src/smsl
+
