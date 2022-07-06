@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    container_name: postgresql_db
+    image: postgres:12
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - ~/apps/techtest/pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - 5050:80 
+    depends_on:
+      - postgres
+  
+  app:
+    image: smsleopard/smsl-django:latest
+    ports:
+      - 8800:8800
+    volumes:
+      - ~/apps/logs/smsl-django:/var/log/smsl-django
+      - ~/apps/smsl:/var/www/html/dsmsl
+      - ~/apps/smsl-django:/usr/src/smsl
