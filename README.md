@@ -13,7 +13,7 @@ This is a Flask application, which is containerized with tests.
 # Structure
 
 ## src
-- The `src` folder contains the source code of project and the technical test.
+- The `src` folder contains the source code of project and the tests.
 
 ## tests
 - The `tests` folder contains the tests for the system.
