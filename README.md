@@ -1,6 +1,6 @@
 # Python Flask Backend
 
-This is the application Flask application, which is containerized with tests.
+This is a Flask application, which is containerized with tests.
 
 - Built in Python version 3.9.7
 - Uses [Uses Flask](https://flask.palletsprojects.com/en/2.1.x/) as the server backend.
