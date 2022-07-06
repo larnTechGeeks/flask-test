@@ -17,4 +17,6 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # configure the container to run in an executed manner
-CMD ["./run.sh"]
+ENTRYPOINT [ "python3" ]
+
+CMD ["app.py"]
