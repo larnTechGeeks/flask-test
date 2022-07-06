@@ -1,9 +1,9 @@
-# Technical Test
+# Python Flask Backend
 
-This is the technical test solution, which satisfies the python test specifications.
+This is the application Flask application, which is containerized with tests.
 
 - Built in Python version 3.9.7
-- Uses [Uses Flask Golic](https://flask.palletsprojects.com/en/2.1.x/) as the server backend.
+- Uses [Uses Flask](https://flask.palletsprojects.com/en/2.1.x/) as the server backend.
 - Uses [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for UI development.
 - Uses [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) for handling migrations.
 - Uses [Flask WTForms](https://flask.palletsprojects.com/en/2.1.x/patterns/wtforms//) for the web forms.
